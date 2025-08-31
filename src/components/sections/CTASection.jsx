@@ -1,3 +1,4 @@
+// components/sections/CTASection.jsx
 import { useState } from "react";
 import { Gift } from "lucide-react";
 import { useTranslation } from "../../context/LanguageContext";
@@ -19,13 +20,26 @@ const CTASection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-orange-900/20 to-gray-900">
-      <div className="container mx-auto px-4">
+    // фоновая картинка + блюр + молочный оверлей
+    <section className="relative overflow-hidden py-20">
+      {/* фон-картинка */}
+      <img
+        src="/images/class1.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 z-0 w-full h-full object-cover blur opacity-55"
+      />
+      {/* молочный полупрозрачный слой для читаемости текста */}
+      <div aria-hidden="true" className="absolute inset-0 z-10 bg-white/30" />
+
+      {/* контент поверх */}
+      <div className="relative z-20 container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-stone-900 mb-4">
             {t("ctaTitle")}
           </h2>
-          <p className="text-xl text-gray-300 mb-12">{t("ctaSubtitle")}</p>
+          <p className="text-xl text-stone-600 mb-12">{t("ctaSubtitle")}</p>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             {[4, 5, 6].map((portions) => (
               <label key={portions} className="cursor-pointer">
@@ -38,27 +52,34 @@ const CTASection = () => {
                   className="sr-only"
                 />
                 <div
-                  className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                  className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform ${
                     selectedPortions === portions
-                      ? "bg-orange-500 text-white shadow-lg shadow-orange-500/25"
-                      : "bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700"
-                  }`}
+                      ? "bg-gradient-to-r from-rose-300 to-rose-400 text-stone-900 shadow-md shadow-rose-300/40 scale-105"
+                      : "bg-white/80 text-stone-600 hover:bg-gradient-to-r hover:from-amber-200 hover:to-amber-300 hover:text-stone-900 border border-amber-200 hover:scale-105"
+                  } active:scale-95`}
                 >
                   {portions} {t("portions4").split(" ")[1]}
                 </div>
               </label>
             ))}
           </div>
+
           <button
             onClick={handleOrder}
-            className="inline-flex items-center px-12 py-5 bg-gradient-to-r from-green-500 to-green-600 
-                     hover:from-green-600 hover:to-green-700 text-white font-bold text-xl rounded-xl 
-                     transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-green-500/25"
+            className="inline-flex items-center px-12 py-5 
+             bg-gradient-to-r from-emerald-300 to-emerald-400 
+             hover:from-emerald-400 hover:to-emerald-500 
+             active:from-emerald-200 active:to-emerald-300
+             text-white font-bold text-xl rounded-xl 
+             transform transition-all duration-300 shadow-lg 
+             hover:shadow-emerald-300/40 
+             hover:scale-105 active:scale-95 cursor-pointer"
           >
             <Gift className="mr-3" size={28} />
             {t("orderOnEtsy")}
           </button>
-          <p className="text-gray-400 mt-6 text-sm">
+
+          <p className="text-stone-500 mt-6 text-sm">
             {t("PaymentAndDelivery")}
           </p>
         </div>

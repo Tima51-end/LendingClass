@@ -1,4 +1,4 @@
-import React from "react";
+// components/common/LanguageSwitcher.jsx
 import { useTranslation } from "../../context/LanguageContext";
 
 const LanguageSwitcher = () => {
@@ -6,23 +6,23 @@ const LanguageSwitcher = () => {
 
   return (
     <div className="fixed top-4 right-4 z-50">
-      <div className="flex bg-gray-800 rounded-lg p-1">
+      <div className="flex bg-white/70 rounded-lg p-1 shadow-sm">
         <button
           onClick={() => setLanguage("de")}
-          className={`px-3 py-1 text-sm font-medium rounded transition-colors ${
+          className={`px-3 py-1 text-sm font-medium rounded transition-all cursor-pointer ${
             language === "de"
-              ? "bg-orange-500 text-white"
-              : "text-gray-300 hover:text-white"
+              ? "bg-amber-300/90 text-stone-900 ring-2 ring-amber-400/70"
+              : "text-stone-500 hover:text-stone-800 hover:ring-1 hover:ring-amber-200"
           }`}
         >
           DE
         </button>
         <button
           onClick={() => setLanguage("en")}
-          className={`px-3 py-1 text-sm font-medium rounded transition-colors ${
+          className={`px-3 py-1 text-sm font-medium rounded transition-all cursor-pointer ${
             language === "en"
-              ? "bg-orange-500 text-white"
-              : "text-gray-300 hover:text-white"
+              ? "bg-amber-300/90 text-stone-900 ring-2 ring-amber-400/70"
+              : "text-stone-500 hover:text-stone-800 hover:ring-1 hover:ring-amber-200"
           }`}
         >
           EN

@@ -45,6 +45,20 @@ export const translations = {
     privacy: "Datenschutz",
     imprint: "Impressum",
     copyright: "© BORO 2025. Alle Rechte vorbehalten.",
+    designExtra:
+      "Handgefertigt mit Liebe von ukrainischen Handwerker:innen und aus Polen 🇵🇱 versendet. Konstruktion aus Holz und Kunststoff – ein ideales Geschenk für Männer, die Landwirtschaft, Mechanik oder einfach einen guten Drink lieben.",
+    usageList: [
+      "Männer, die Traktoren, das Landleben oder Werkzeug mögen",
+      "Junggesellenabschiede, Geburtstage, Hochzeiten",
+      "Vatertag, Ruhestand, Einweihung",
+    ],
+    featuresList: [
+      "Automatisches Ausgießsystem – schenkt 4, 5 oder 6 Portionen (57 ml) auf einmal per Knopfdruck ein",
+      "USB-Stromversorgung – funktioniert mit jeder Powerbank oder jedem Ladegerät",
+      "Digitaler Volumenregler – präzise und einfach zu bedienen",
+      "Sockel aus hochwertigem Holz – robust und stilvoll",
+      "Lustiger Mähdrescher obenauf – Überraschungseffekt garantiert",
+    ],
   },
   en: {
     byBoro: "by Boro",
@@ -91,5 +105,19 @@ export const translations = {
     privacy: "Privacy",
     imprint: "Imprint",
     copyright: "© BORO 2025. All rights reserved.",
+    designExtra:
+      "Handmade with love by Ukrainian artisans and shipped from Poland 🇵🇱. Crafted from wood and plastic — an ideal gift for men who love farming, mechanics, or simply a good drink.",
+    usageList: [
+      "Men who love tractors, farm life, or tools",
+      "Bachelor parties, birthdays, weddings",
+      "Father’s Day, retirement, housewarming",
+    ],
+    featuresList: [
+      "Automatic dispensing system — pours 4, 5, or 6 shots (57 ml) at once with a single press",
+      "USB powered — works with any power bank or charger",
+      "Digital volume controller — precise and easy to use",
+      "Base made of high-quality wood — durable and stylish",
+      "Fun combine toy on top — surprise factor guaranteed",
+    ],
   },
 };

@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useTranslation } from "../../context/LanguageContext";
 
 const SEOHead = () => {
   const { t, language } = useTranslation();
 
   useEffect(() => {
-    document.title = t("title");
+    document.title = t("CLAAS dispenser by Boro");
     const setMeta = (name, content) => {
       let meta = document.querySelector(`meta[name="${name}"]`);
       if (!meta) {

@@ -1,3 +1,4 @@
+// components/sections/AdvantagesSection.jsx
 import { Heart, Zap, Settings, Gift, Truck, Check } from "lucide-react";
 import { useTranslation } from "../../context/LanguageContext";
 
@@ -38,29 +39,29 @@ const AdvantagesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 bg-amber-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
             {t("advantages")}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-green-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-amber-400/70 to-emerald-400/70 mx-auto" />
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {advantages.map((advantage, index) => (
             <div key={index} className="group">
               <div
-                className="bg-gray-900 rounded-2xl p-8 h-full hover:bg-gray-800 
-                            transition-all duration-300 border border-gray-800 hover:border-orange-500/30
-                            transform hover:scale-105"
+                className="bg-white/80 rounded-2xl p-8 h-full hover:bg-white 
+                            transition-all duration-300 border border-amber-100 hover:border-amber-300/60
+                            transform hover:scale-105 shadow-sm hover:shadow-md"
               >
-                <div className="text-orange-500 mb-6 group-hover:text-green-400 transition-colors duration-300">
+                <div className="text-amber-500 mb-6 group-hover:text-emerald-600 transition-colors duration-300">
                   {advantage.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">
+                <h3 className="text-xl font-bold text-stone-900 mb-4">
                   {advantage.title}
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-stone-600 leading-relaxed">
                   {advantage.description}
                 </p>
               </div>
