@@ -1,4 +1,3 @@
-// components/sections/ReviewsSection.jsx
 import { Star } from "lucide-react";
 import { useTranslation } from "../../context/LanguageContext";
 
@@ -33,7 +32,7 @@ const ReviewsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-6 md:py-14 lg:py-24 bg-gradient-to-b from-slate-50 to-white">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-light text-slate-900 mb-6 tracking-tight">

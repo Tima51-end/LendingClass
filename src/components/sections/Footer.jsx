@@ -1,11 +1,10 @@
-// components/sections/Footer.jsx
 import { useTranslation } from "../../context/LanguageContext";
 
 const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-gradient-to-t from-slate-50 to-white py-16 border-t border-slate-100">
+    <footer className="bg-gradient-to-t from-slate-50 to-white py-6 md:py-12 lg:py-16 border-t border-slate-100">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0 flex flex-col items-center md:items-start">

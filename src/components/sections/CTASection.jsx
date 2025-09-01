@@ -1,4 +1,3 @@
-// components/sections/CTASection.jsx
 import { useState } from "react";
 import { Gift } from "lucide-react";
 import { useTranslation } from "../../context/LanguageContext";
@@ -20,8 +19,8 @@ const CTASection = () => {
   };
 
   return (
-    <section className="relative overflow-hidden py-24">
-      {/* фон-картинка */}
+    <section className="relative overflow-hidden py-6 md:py-14 lg:py-24">
+
       <img
         src="/images/class1.jpg"
         alt=""
@@ -29,13 +28,13 @@ const CTASection = () => {
         className="absolute inset-0 z-0 w-full h-full object-cover"
       />
 
-      {/* градиентный оверлей для читаемости */}
+
       <div
         aria-hidden="true"
         className="absolute inset-0 z-10 bg-gradient-to-b from-white/95 via-white/90 to-white/95"
       />
 
-      {/* контент поверх */}
+
       <div className="relative z-20 container mx-auto px-6 max-w-4xl">
         <div className="text-center">
           <h2 className="text-4xl lg:text-5xl font-light text-slate-900 mb-6 tracking-tight">

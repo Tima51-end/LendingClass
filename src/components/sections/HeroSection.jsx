@@ -1,4 +1,3 @@
-// components/sections/HeroSection.jsx
 import { Gift } from "lucide-react";
 import { useTranslation } from "../../context/LanguageContext";
 import { trackEvent } from "../../utils/tracking";
@@ -27,7 +26,7 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 py-20 relative z-10 max-w-7xl">
+      <div className="container mx-auto px-6 py-6 md:py-12 lg:py-20 relative z-10 max-w-7xl">
         <div className="grid lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-6 text-center lg:text-left">
             <h1 className="text-5xl lg:text-7xl font-light text-slate-900 mb-8 leading-tight tracking-tight">

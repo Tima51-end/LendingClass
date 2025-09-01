@@ -1,9 +1,7 @@
-// components/sections/ProductSection.jsx
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "../../context/LanguageContext";
 import { CheckCircle2 } from "lucide-react";
 
-// Простая обёртка для появления при скролле
 const Reveal = ({ children, delay = 0 }) => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -61,20 +59,22 @@ const ProductSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-6 md:py-14 lg:py-24 bg-gradient-to-b from-slate-50 to-white">
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="text-center mb-20">
+        {/* компактнее заголовок на мобиле */}
+        <div className="text-center mb-10 md:mb-16 lg:mb-20">
           <h2 className="text-4xl lg:text-5xl font-light text-slate-900 mb-6 tracking-tight">
             {t("productTitle")}
           </h2>
           <div className="w-16 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto" />
         </div>
 
-        <div className="space-y-32">
+        {/* расстояние между блоками секции — адаптивное */}
+        <div className="space-y-12 md:space-y-20 lg:space-y-28">
           {sections.map((section, index) => (
             <div
               key={index}
-              className={`grid lg:grid-cols-12 gap-16 items-center ${
+              className={`grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center ${
                 index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
               }`}
             >
@@ -87,14 +87,12 @@ const ProductSection = () => {
                   {section.title}
                 </h3>
 
-                {/* Обычное описание для всех, кроме первого */}
                 {index !== 0 && (
                   <p className="text-slate-600 text-lg leading-relaxed mb-8 font-light">
                     {section.description}
                   </p>
                 )}
 
-                {/* 1-е фото — икон-список из description + designExtra */}
                 {index === 0 && (
                   <ul className="space-y-6">
                     {[section.description, t("designExtra")]
@@ -112,7 +110,6 @@ const ProductSection = () => {
                   </ul>
                 )}
 
-                {/* 2-е фото — список «Идеально подходит…» */}
                 {index === 1 && Array.isArray(t("usageList")) && (
                   <>
                     <p className="text-slate-600 text-lg leading-relaxed mb-8 font-light">
@@ -133,7 +130,6 @@ const ProductSection = () => {
                   </>
                 )}
 
-                {/* 3-е фото — особенности */}
                 {index === 2 && Array.isArray(t("featuresList")) && (
                   <>
                     <p className="text-slate-600 text-lg leading-relaxed mb-8 font-light">
