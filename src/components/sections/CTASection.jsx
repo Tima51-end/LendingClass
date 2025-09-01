@@ -20,27 +20,32 @@ const CTASection = () => {
   };
 
   return (
-    // фоновая картинка + блюр + молочный оверлей
-    <section className="relative overflow-hidden py-20">
+    <section className="relative overflow-hidden py-24">
       {/* фон-картинка */}
       <img
         src="/images/class1.jpg"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 z-0 w-full h-full object-cover blur opacity-55"
+        className="absolute inset-0 z-0 w-full h-full object-cover"
       />
-      {/* молочный полупрозрачный слой для читаемости текста */}
-      <div aria-hidden="true" className="absolute inset-0 z-10 bg-white/30" />
+
+      {/* градиентный оверлей для читаемости */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-10 bg-gradient-to-b from-white/95 via-white/90 to-white/95"
+      />
 
       {/* контент поверх */}
-      <div className="relative z-20 container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-stone-900 mb-4">
+      <div className="relative z-20 container mx-auto px-6 max-w-4xl">
+        <div className="text-center">
+          <h2 className="text-4xl lg:text-5xl font-light text-slate-900 mb-6 tracking-tight">
             {t("ctaTitle")}
           </h2>
-          <p className="text-xl text-stone-600 mb-12">{t("ctaSubtitle")}</p>
+          <p className="text-xl text-slate-600 mb-16 font-light max-w-2xl mx-auto leading-relaxed">
+            {t("ctaSubtitle")}
+          </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             {[4, 5, 6].map((portions) => (
               <label key={portions} className="cursor-pointer">
                 <input
@@ -52,11 +57,11 @@ const CTASection = () => {
                   className="sr-only"
                 />
                 <div
-                  className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform ${
+                  className={`px-8 py-4 rounded-2xl font-medium transition-all duration-300 ${
                     selectedPortions === portions
-                      ? "bg-gradient-to-r from-rose-300 to-rose-400 text-stone-900 shadow-md shadow-rose-300/40 scale-105"
-                      : "bg-white/80 text-stone-600 hover:bg-gradient-to-r hover:from-amber-200 hover:to-amber-300 hover:text-stone-900 border border-amber-200 hover:scale-105"
-                  } active:scale-95`}
+                      ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/25 scale-105"
+                      : "bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-white hover:text-slate-900 border border-slate-200 hover:border-slate-300 hover:scale-105 hover:shadow-md"
+                  }`}
                 >
                   {portions} {t("portions4").split(" ")[1]}
                 </div>
@@ -67,19 +72,19 @@ const CTASection = () => {
           <button
             onClick={handleOrder}
             className="inline-flex items-center px-12 py-5 
-             bg-gradient-to-r from-emerald-300 to-emerald-400 
-             hover:from-emerald-400 hover:to-emerald-500 
-             active:from-emerald-200 active:to-emerald-300
-             text-white font-bold text-xl rounded-xl 
-             transform transition-all duration-300 shadow-lg 
-             hover:shadow-emerald-300/40 
-             hover:scale-105 active:scale-95 cursor-pointer"
+                     bg-gradient-to-r from-emerald-500 to-teal-600 
+                     hover:from-emerald-600 hover:to-teal-700 
+                     text-white font-medium text-xl rounded-2xl 
+                     transform transition-all duration-300 shadow-xl 
+                     hover:shadow-emerald-500/25 
+                     hover:scale-105 active:scale-95 cursor-pointer
+                     backdrop-blur-sm"
           >
-            <Gift className="mr-3" size={28} />
+            <Gift className="mr-3" size={24} />
             {t("orderOnEtsy")}
           </button>
 
-          <p className="text-stone-500 mt-6 text-sm">
+          <p className="text-slate-500 mt-8 text-sm font-light">
             {t("PaymentAndDelivery")}
           </p>
         </div>

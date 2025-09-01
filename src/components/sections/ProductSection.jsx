@@ -61,45 +61,50 @@ const ProductSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-amber-50 to-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-stone-900 mb-4">
+    <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl lg:text-5xl font-light text-slate-900 mb-6 tracking-tight">
             {t("productTitle")}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-emerald-400/70 to-amber-400/70 mx-auto" />
+          <div className="w-16 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto" />
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-32">
           {sections.map((section, index) => (
             <div
               key={index}
-              className={`grid lg:grid-cols-2 gap-12 items-center ${
+              className={`grid lg:grid-cols-12 gap-16 items-center ${
                 index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
               }`}
             >
-              <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
-                {/* Заголовок без подчеркиваний */}
-                <h3 className="text-2xl lg:text-3xl font-bold text-stone-800 leading-snug">
+              <div
+                className={`lg:col-span-5 ${
+                  index % 2 === 1 ? "lg:col-start-8" : ""
+                }`}
+              >
+                <h3 className="text-3xl lg:text-4xl font-light text-slate-900 leading-tight mb-8">
                   {section.title}
                 </h3>
 
-                {/* Обычное описание для всех, кроме первого (там заменим на икон-список) */}
+                {/* Обычное описание для всех, кроме первого */}
                 {index !== 0 && (
-                  <p className="mt-3 text-stone-600 text-lg leading-relaxed">
+                  <p className="text-slate-600 text-lg leading-relaxed mb-8 font-light">
                     {section.description}
                   </p>
                 )}
 
                 {/* 1-е фото — икон-список из description + designExtra */}
                 {index === 0 && (
-                  <ul className="mt-4 space-y-3">
+                  <ul className="space-y-6">
                     {[section.description, t("designExtra")]
                       .filter(Boolean)
                       .map((item, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 flex-none mt-0.5 text-emerald-500" />
-                          <span className="text-stone-700 text-lg leading-relaxed">
+                        <li key={i} className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mt-0.5">
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                          </div>
+                          <span className="text-slate-700 text-lg leading-relaxed font-light">
                             {item}
                           </span>
                         </li>
@@ -110,31 +115,39 @@ const ProductSection = () => {
                 {/* 2-е фото — список «Идеально подходит…» */}
                 {index === 1 && Array.isArray(t("usageList")) && (
                   <>
-                    <p className="mt-3 text-stone-600 text-lg leading-relaxed">
+                    <p className="text-slate-600 text-lg leading-relaxed mb-8 font-light">
                       {section.description}
                     </p>
-                    <ul className="mt-4 space-y-2">
+                    <ul className="space-y-4">
                       {t("usageList").map((item, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 flex-none mt-0.5 text-emerald-500" />
-                          <span className="text-stone-700">{item}</span>
+                        <li key={i} className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mt-0.5">
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                          </div>
+                          <span className="text-slate-700 font-light">
+                            {item}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </>
                 )}
 
-                {/* 3-е фото — особенности (строго одинаковые иконки, сетка на sm+) */}
+                {/* 3-е фото — особенности */}
                 {index === 2 && Array.isArray(t("featuresList")) && (
                   <>
-                    <p className="mt-3 text-stone-600 text-lg leading-relaxed">
+                    <p className="text-slate-600 text-lg leading-relaxed mb-8 font-light">
                       {section.description}
                     </p>
-                    <ul className="mt-4 grid sm:grid-cols-2 gap-x-6 gap-y-2">
+                    <ul className="grid sm:grid-cols-1 gap-4">
                       {t("featuresList").map((item, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 flex-none mt-0.5 text-emerald-500" />
-                          <span className="text-stone-700">{item}</span>
+                        <li key={i} className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mt-0.5">
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                          </div>
+                          <span className="text-slate-700 font-light">
+                            {item}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -142,14 +155,21 @@ const ProductSection = () => {
                 )}
               </div>
 
-              <div className={index % 2 === 1 ? "lg:col-start-1" : ""}>
+              <div
+                className={`lg:col-span-6 ${
+                  index % 2 === 1 ? "lg:col-start-1" : ""
+                }`}
+              >
                 <Reveal delay={index * 120}>
-                  <div className="bg-white/80 rounded-2xl p-4 shadow-lg border border-amber-100">
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="w-full h-full object-cover rounded-xl shadow"
-                    />
+                  <div className="relative group">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-emerald-600/10 to-teal-600/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl"></div>
+                    <div className="relative bg-white rounded-2xl p-2 shadow-lg border border-slate-100 group-hover:shadow-xl transition-all duration-500">
+                      <img
+                        src={section.image}
+                        alt={section.title}
+                        className="w-full h-full object-cover rounded-xl"
+                      />
+                    </div>
                   </div>
                 </Reveal>
               </div>

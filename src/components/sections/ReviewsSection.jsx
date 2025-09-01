@@ -33,44 +33,54 @@ const ReviewsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-amber-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-stone-900 mb-4">
+    <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl lg:text-5xl font-light text-slate-900 mb-6 tracking-tight">
             {t("reviewsTitle")}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-amber-400/70 to-emerald-400/70 mx-auto"></div>
+          <div className="w-16 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto" />
         </div>
+
         <div className="grid md:grid-cols-2 gap-8">
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-white/80 rounded-2xl p-8 border border-amber-100 shadow-sm hover:shadow-md transition-shadow"
+              className="group bg-white rounded-3xl p-8 border border-slate-100 
+                        hover:border-slate-200 hover:shadow-lg transition-all duration-500 
+                        hover:-translate-y-1 relative overflow-hidden"
             >
-              <div className="flex items-start space-x-4">
-                <img
-                  src={review.avatar}
-                  alt={review.name}
-                  className="w-12 h-12 rounded-full"
-                />
-                <div className="flex-1">
-                  <div className="flex items-center mb-3">
-                    <h4 className="text-stone-900 font-semibold mr-3">
-                      {review.name}
-                    </h4>
-                    <div className="flex space-x-1">
-                      {[...Array(review.rating)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-4 h-4 fill-amber-400 text-amber-400"
-                        />
-                      ))}
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-teal-50/30 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+
+              <div className="relative z-10">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="relative">
+                    <img
+                      src={review.avatar}
+                      alt={review.name}
+                      className="w-14 h-14 rounded-2xl object-cover border-2 border-slate-100"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="text-slate-900 font-medium text-lg">
+                        {review.name}
+                      </h4>
+                      <div className="flex space-x-1">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-4 h-4 fill-emerald-400 text-emerald-400"
+                          />
+                        ))}
+                      </div>
                     </div>
                   </div>
-                  <p className="text-stone-500 text-lg leading-relaxed">
-                    "{review.text}"
-                  </p>
                 </div>
+
+                <blockquote className="text-slate-600 text-lg leading-relaxed font-light italic">
+                  "{review.text}"
+                </blockquote>
               </div>
             </div>
           ))}
