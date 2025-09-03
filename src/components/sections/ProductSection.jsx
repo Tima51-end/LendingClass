@@ -59,9 +59,8 @@ const ProductSection = () => {
   ];
 
   return (
-    <section className="py-6 md:py-14 lg:py-24 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-6 md:py-14 lg:py-18 bg-gradient-to-b from-slate-50 to-white">
       <div className="container mx-auto px-6 max-w-7xl">
-        {/* компактнее заголовок на мобиле */}
         <div className="text-center mb-10 md:mb-16 lg:mb-20">
           <h2 className="text-4xl lg:text-5xl font-light text-slate-900 mb-6 tracking-tight">
             {t("productTitle")}
@@ -69,7 +68,6 @@ const ProductSection = () => {
           <div className="w-16 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto" />
         </div>
 
-        {/* расстояние между блоками секции — адаптивное */}
         <div className="space-y-12 md:space-y-20 lg:space-y-28">
           {sections.map((section, index) => (
             <div

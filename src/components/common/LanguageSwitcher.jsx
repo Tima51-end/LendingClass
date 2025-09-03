@@ -1,11 +1,10 @@
-// components/common/LanguageSwitcher.jsx
 import { useTranslation } from "../../context/LanguageContext";
 
 const LanguageSwitcher = () => {
   const { language, setLanguage } = useTranslation();
 
   return (
-    <div className="fixed top-6 right-6 z-50">
+    <div className="fixed top-16 md:top-14 right-6 z-50">
       <div className="flex bg-white/90 backdrop-blur-sm rounded-xl p-1 shadow-lg border border-slate-200/50">
         <button
           onClick={() => setLanguage("de")}

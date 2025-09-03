@@ -9,7 +9,6 @@ export const translations = {
     videoTitle1: "Sehen Sie den ",
     videoTitle2: "CLAAS-Spender ",
     videoTitle3: "in Aktion",
-    demoVideo: "Demo-Video wird hier eingefügt",
     advantages: "Warum unseren CLAAS-Spender wählen?",
     handmade: "Handgemacht",
     handmadeDesc: "Jeder Spender wird sorgfältig handgefertigt",
@@ -40,13 +39,12 @@ export const translations = {
     portions5: "5 Portionen",
     portions6: "6 Portionen",
     orderOnEtsy: "Zur Bestellung auf Etsy",
-    PaymentAndDelivery:
-      "Sichere Bezahlung über Etsy • Kostenloser Versand ab 35€",
+    PaymentAndDelivery: "Sichere Bezahlung über Etsy • Kostenloser Versand",
     privacy: "Datenschutz",
     imprint: "Impressum",
     copyright: "© BORO 2025. Alle Rechte vorbehalten.",
     designExtra:
-      "Handgefertigt mit Liebe von ukrainischen Handwerker:innen und aus Polen 🇵🇱 versendet. Konstruktion aus Holz und Kunststoff – ein ideales Geschenk für Männer, die Landwirtschaft, Mechanik oder einfach einen guten Drink lieben.",
+      "Handgefertigt und aus Polen 🇵🇱 versendet. Konstruktion aus Holz und Kunststoff – ein ideales Geschenk für Männer, die Landwirtschaft, Mechanik oder einfach einen guten Drink lieben.",
     usageList: [
       "Männer, die Traktoren, das Landleben oder Werkzeug mögen",
       "Junggesellenabschiede, Geburtstage, Hochzeiten",
@@ -59,6 +57,21 @@ export const translations = {
       "Sockel aus hochwertigem Holz – robust und stilvoll",
       "Lustiger Mähdrescher obenauf – Überraschungseffekt garantiert",
     ],
+    promoFreeShipping: "Kostenloser Versand",
+    promoTwoDiscount: "Rabatt beim Kauf von 2 Stück",
+    engravingBadge: "Optionale Zusatzfunktion",
+    engravingTitle: "Personalisierte Gravur",
+    engravingSubtitle:
+      "Auf Wunsch gravieren wir Namen, Datum, kurzen Text oder ein einfaches Logo auf die Holzbasis.",
+    engravingPoints: [
+      "Gravur auf der Holzbasis – Position nach Absprache",
+      "Text (Name/Datum) oder einfaches Logo (Vektor bevorzugt)",
+      "Entwurf zur Bestätigung vor der Umsetzung",
+      "Preis & Details nach kurzer Nachricht",
+    ],
+    engravingPreviewNote: "Beispiel-Layout – nur zu Demo-Zwecken",
+    engravingNote:
+      "Füge deinen Gravurwunsch beim Etsy-Checkout unter „Personalisierung“ hinzu oder schreibe uns direkt eine Nachricht.",
   },
   en: {
     byBoro: "by Boro",
@@ -70,7 +83,6 @@ export const translations = {
     videoTitle1: "See the ",
     videoTitle2: "CLAAS dispenser ",
     videoTitle3: "in action",
-    demoVideo: "Demo video will be inserted here",
     advantages: "Why choose our CLAAS dispenser?",
     handmade: "Handmade",
     handmadeDesc: "Each dispenser is carefully handcrafted",
@@ -101,12 +113,12 @@ export const translations = {
     portions5: "5 portions",
     portions6: "6 portions",
     orderOnEtsy: "Order on Etsy",
-    PaymentAndDelivery: "Secure payment via Etsy • Free shipping from 35€",
+    PaymentAndDelivery: "Secure payment via Etsy • Free shipping",
     privacy: "Privacy",
     imprint: "Imprint",
     copyright: "© BORO 2025. All rights reserved.",
     designExtra:
-      "Handmade with love by Ukrainian artisans and shipped from Poland 🇵🇱. Crafted from wood and plastic — an ideal gift for men who love farming, mechanics, or simply a good drink.",
+      "Handmade and shipped from Poland 🇵🇱. Crafted from wood and plastic — an ideal gift for men who love farming, mechanics, or simply a good drink.",
     usageList: [
       "Men who love tractors, farm life, or tools",
       "Bachelor parties, birthdays, weddings",
@@ -119,5 +131,20 @@ export const translations = {
       "Base made of high-quality wood — durable and stylish",
       "Fun combine toy on top — surprise factor guaranteed",
     ],
+    promoFreeShipping: "Free shipping",
+    promoTwoDiscount: "Discount when buying 2",
+    engravingBadge: "Optional add-on",
+    engravingTitle: "Personalized engraving",
+    engravingSubtitle:
+      "On request, we engrave a name, date, short message or a simple logo on the wooden base.",
+    engravingPoints: [
+      "Engraving on the wooden base – placement by request",
+      "Text (name/date) or simple logo (vector preferred)",
+      "Preview for approval before production",
+      "Pricing & details via quick message",
+    ],
+    engravingPreviewNote: "Sample layout – for demo only",
+    engravingNote:
+      "Add your engraving text in Etsy checkout under “Personalization” or just send us a message.",
   },
 };

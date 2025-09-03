@@ -11,6 +11,8 @@ import ReviewsSection from "./components/sections/ReviewsSection";
 import CTASection from "./components/sections/CTASection";
 import Footer from "./components/sections/Footer";
 import { useEffect, useState } from "react";
+import Header from "./components/sections/Header";
+import EngravingSection from "./components/sections/EngravingSection";
 
 const App = () => {
   const [language, setLanguage] = useState("de");
@@ -27,12 +29,14 @@ const App = () => {
       {/* было: bg-black text-white */}
       <div className="min-h-screen bg-amber-50 text-stone-800">
         <SEOHead />
+        <Header />
         <LanguageSwitcher />
         <HeroSection />
         <VideoSection />
         <AdvantagesSection />
         <ProductSection />
         <ReviewsSection />
+        <EngravingSection />
         <CTASection />
         <Footer />
       </div>
